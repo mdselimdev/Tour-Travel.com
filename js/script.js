@@ -13,6 +13,8 @@ let menuBar = document.querySelector('#menu-bar');
 
 let navBar = document.querySelector('.navbar');
 
+let videoBtn = document.querySelectorAll('.vid-btn');
+
 window.onscroll = () => {
     searchBtn.classList.remove('fa-times');
     searchBar.classList.remove('active');
@@ -46,3 +48,12 @@ formClose.addEventListener('click', () => {
     logInForm.classList.remove('active');
 
 });
+
+videoBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.controls .active').classList.remove('active')
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src');
+        document.querySelector('#video-slider').src = src;
+    })
+})
