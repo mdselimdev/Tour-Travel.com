@@ -1,0 +1,243 @@
+
+/* google font cdn link  */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+
+/* default some css  */
+
+
+:root {
+    --orange-color : #ffa500;
+}
+
+*::selection {
+    background-color: var(--orange-color) ;
+    color : #ffffff;
+}
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0 ;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+}
+
+
+.btn {
+    display: inline-block;
+    margin: 1rem 0;
+    background: var(--orange-color);
+    color: #ffffff;
+    padding: 0.8rem 3rem;
+    border: 0.2rem solid var(--orange-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange-color);
+}
+
+/* header - section - css - start - here  */
+
+header {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo {
+    color: #ffffff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+header .logo > span {
+    color: var(--orange-color);
+}
+
+header .navbar a {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 0.8rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange-color);
+}
+
+header .icons i {
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+header .icons i:hover {
+    color: var(--orange-color);
+}
+
+header .search-bar-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background-color: #333;
+    border-top: 0.1rem solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
+}
+
+header .search-bar-container.active {
+    clip-path: polygon(0 0, 100% 0,100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+
+header .search-bar-container label {
+    color: #ffffff; 
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+    color: var(--orange-color);
+}
+
+#menu-bar {
+    color: #ffffff;
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* header - section - css - end - here  */
+
+/* log in box css starts  */
+
+.log-in-form-container {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.log-in-form-container.active {
+    top: 0;
+}
+
+.log-in-form-container form {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    width: 50rem;
+}
+
+.log-in-form-container form h3 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+.log-in-form-container form .box {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border: 0.2rem solid rgba(0,0,0,0.3);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border-radius: 5px;
+}
+
+.log-in-form-container form .box:focus {
+    border-color: var(--orange-color);
+}
+
+.log-in-form-container form #remember {
+    display: inline-block;
+    padding: 2rem 0;
+}
+
+.log-in-form-container form label {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.log-in-form-container form .btn {
+    width: 100% ;
+    display: block;
+}
+
+.log-in-form-container form p {
+    font-size: 1.7rem;
+    color: #666666;
+    padding: .5rem 0;
+    text-transform: capitalize;
+}
+
+.log-in-form-container form p a {
+    color: var(--orange-color);
+}
+
+.log-in-form-container form p a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.log-in-form-container #form-close {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    font-size: 5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* log in box css ends  */
